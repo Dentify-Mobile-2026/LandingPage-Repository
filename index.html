@@ -3,417 +3,553 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="MediTech - Plataforma de gestión para consultorios y clínicas dentales.">
-    <title>MediTech</title>
+    <meta name="description" content="Dentify: Software clínico para consultorios dentales. Agenda inteligente anti-solapamiento, alertas médicas de pacientes, catálogo de tratamientos, inventario y facturación en un solo lugar.">
+    <title>Dentify · Gestión Odontológica Inteligente</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/styles/custom-styles.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css"
-          rel="stylesheet">
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="js/bootstrap.bundle.min.js"></script>
+    <link href="assets/styles/custom-styles.css" rel="stylesheet">
 </head>
 <body>
-<nav id="home" class="navbar fixed-top position-fixed navbar-expand-lg custom-navbar">
 
-    <div class="container-fluid">
-        <a data-aos="fade-right" class="navbar-brand ms-4 fw-medium fs-3" href="#">
-            MediTech
+<!-- Navbar -->
+<nav id="topNav" class="navbar navbar-expand-lg fixed-top dentify-nav">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2 text-decoration-none" href="#inicio">
+            <span class="brand-mark"><i class="bi bi-heart-pulse-fill"></i></span>
+            <span class="brand-name">Dentify</span>
         </a>
 
-        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-            <ul class="nav nav-underline navbar-nav">
-                <li class="nav-item mx-5">
-                    <a data-aos="fade-down" class="nav-link active" aria-current="page" href="#about-us-container">Nosotros</a>
-                </li>
-                <li class="nav-item mx-5">
-                    <a data-aos="fade-down" class="nav-link" href="#services-container">Servicios</a>
-                </li>
-                <li class="nav-item mx-5">
-                    <a data-aos="fade-down" class="nav-link" href="#subscription-container">Suscripciones</a>
-                </li>
-                <li class="nav-item mx-5">
-                    <a data-aos="fade-down" class="nav-link" href="#extra-info-container">Información</a>
-                </li>
+        <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false"
+                aria-label="Abrir navegación">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav mx-auto gap-lg-1 my-3 my-lg-0">
+                <li class="nav-item"><a class="nav-link" href="#problemas">Por qué Dentify</a></li>
+                <li class="nav-item"><a class="nav-link" href="#modulos">Plataforma</a></li>
+                <li class="nav-item"><a class="nav-link" href="#flujo">Cómo Funciona</a></li>
+                <li class="nav-item"><a class="nav-link" href="#planes">Planes</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contacto">Solicitar Demo</a></li>
             </ul>
-        </div>
 
-        <div class="dropdown mx-lg-3">
-            <button class="btn btn-secondary dropdown-toggle rounded-pill rounded-2 shadow-lg"
-                    style="background: #1A0E10; color: #FFFFFF;" type="button" id="dropdownMenuButton"
-                    data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="bi bi-translate"></i>
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <li><a class="dropdown-item" href="index.html">ES</a></li>
-                <li><a class="dropdown-item" href="index_en.html">EN</a></li>
-
-            </ul>
-        </div>
-
-        <div>
-            <button type="button" class="btn btn-primary btn-lg rounded-pill rounded-2 shadow-lg custom-button"
-                    style="background-color: #2C3E50; color: #FFFFFF;">
-
-                <a data-aos="fade-down" href="#contact-us-container"
-                   class="text-white text-decoration-none">Contáctanos</a>
-            </button>
+            <div class="d-flex align-items-center gap-2 pb-2 pb-lg-0">
+                <div class="dropdown">
+                    <button class="lang-pill dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-globe2 me-1"></i>ES
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end shadow-sm border">
+                        <li><a class="dropdown-item active" href="index.html">Español (ES)</a></li>
+                        <li><a class="dropdown-item" href="index_en.html">English (EN)</a></li>
+                    </ul>
+                </div>
+                <a href="#contacto" class="btn btn-dentify">Prueba Gratis 30 Días</a>
+            </div>
         </div>
     </div>
 </nav>
 
 <main>
-    <div id="about-us-container" class="m-lg-5">
-        <div class="row align-items-center">
-            <div class="col-md-6 text-center">
-                <img data-aos="fade-right" id="img-about-us" class="rounded-5 " alt="img_title"
-                     src="assets/img/diseno-clinica-dental-pequena-4.webp" style="width: 70%;">
-            </div>
-            <div class="col-md-6 d-flex flex-column justify-content-center align-items-center text-center"
-                 style="width: 40%; font-size: 20px;">
-                <p data-aos="fade-left" class="fs-1" style="font-family: HospitalBold;">¿Quiénes Somos?</p>
-                <p data-aos="fade-left">
-                    En Meditech tenemos como compromiso transformar la manera en que los profesionales de la odontología
-                    administran sus clínicas, brindando herramientas avanzadas y eficientes que optimizan la operación
-                    diaria y mejoran la experiencia del paciente.
-
-                </p>
-            </div>
-        </div>
+    <!-- Hero -->
+    <section id="inicio" class="hero-section">
         <div class="container">
-            <div class="row row-cols-1 row-cols-md-3 g-5 m-lg-4">
-                <div class="col">
-                    <div class="card custom-card h-100">
-                        <img src="assets/img/clinica-dental-equipo.jpg" class="card-img-top img-fluid card-img-custom"
-                             alt="img1">
-                        <div class="card-body">
-                            <h5 class="card-title">Mision</h5>
-                            <p class="card-text"> simplificar y optimizar la gestión de consultorios
-                                dentales.</p>
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6" data-aos="fade-up">
+                    <span class="eyebrow-badge mb-3">
+                        <span class="eyebrow-dot"></span>
+                        Diseñado para odontólogos y clínicas independientes
+                    </span>
+                    <h1 class="hero-title mb-3">
+                        Control total de tu consultorio dental, <span>sin perder tiempo en papeles.</span>
+                    </h1>
+                    <p class="hero-lead mb-4">
+                        Centraliza agenda anti-solapamiento, fichas clínicas con alertas de alergias,
+                        catálogo de tratamientos, control de insumos y facturación en una sola app web y móvil.
+                    </p>
+
+                    <div class="d-flex flex-wrap gap-3 mb-4">
+                        <a href="#contacto" class="btn btn-dentify btn-lg px-4">
+                            Empezar Prueba Gratuita <i class="bi bi-arrow-right ms-1"></i>
+                        </a>
+                        <a href="#modulos" class="btn btn-dentify-outline btn-lg px-4">
+                            Explorar Módulos
+                        </a>
+                    </div>
+
+                    <div class="hero-proof">
+                        <span><i class="bi bi-check-circle-fill me-1"></i>Sin tarjeta de crédito</span>
+                        <span><i class="bi bi-check-circle-fill me-1"></i>Web, Android y iPhone</span>
+                        <span><i class="bi bi-check-circle-fill me-1"></i>Configuración en 5 min</span>
+                    </div>
+                </div>
+
+                <!-- Live UI Preview Mockup -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="app-mockup">
+                        <div class="mockup-topbar">
+                            <div class="mockup-dots"><span></span><span></span><span></span></div>
+                            <span class="small fw-semibold text-secondary">Dentify · Panel Clínico Diario</span>
+                            <span class="badge rounded-pill text-bg-light border text-dark">En vivo</span>
                         </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card custom-card h-100">
-                        <img src="assets/img/como-organizar-clinica-dental.webp"
-                             class="card-img-top img-fluid card-img-custom" alt="img2">
-                        <div class="card-body">
-                            <h5 class="card-title">Vision</h5>
-                            <p class="card-text">Convertirnos en la plataforma líder de gestión de
-                                consultorios dentales en Lima.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card custom-card h-100">
-                        <img src="assets/img/habilidades-de-un-dentista.jpg"
-                             class="card-img-top img-fluid card-img-custom" alt="img3">
-                        <div class="card-body">
-                            <h5 class="card-title">Valores</h5>
-                            <p class="card-text">Calidad y Excelencia, Innovación constante y responsabilidad social
-                                para contribuir
-                                positivamente.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-    <div id="services-container" class="mt-lg-1 mb-lg-1">
-        <div class="row align-items-center" id="description-services">
-            <div class=" d-flex flex-column justify-content-center align-items-center text-center"
-                 style="width: 40%; font-size: 20px;">
-                <p class="fs-1" style="font-family: HospitalBold;">¿Qué Ofrecemos?</p>
-                <p>
-                    Nuestro software está diseñado para simplificar la administración diaria, permitiendo a los
-                    profesionales de la
-                    odontología concentrarse en lo más importante: el cuidado de sus pacientes.
-                </p>
-            </div>
-            <div class="col-md-7 text-center">
-                <img id="img-services" class="rounded-5 " alt="img_title"
-                     src="assets/img/personal-de-clinica-hablando-por-telefono-fuente-canva.jpeg" style="width: 70%;">
-            </div>
-        </div>
-        <div class="container my-lg-5">
-            <div class="row row-cols-1 row-cols-md-2 m-5">
-                <div class="col">
-                    <div class="card custom-card h-75 d-flex flex-row">
-                        <img src="assets/img/images%20(1).png" class="img-fluid card-img-left" alt="img1"
-                             style="width: 250px;">
-                        <div class="card-body">
-                            <h5 class="card-title">Productividad</h5>
-                            <p class="card-text">
-                                Optimiza la productividad del consultorio dental al automatizar tareas
-                                rutinarias y agilizar los procesos administrativos.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card custom-card h-75 d-flex flex-row">
-                        <img src="assets/img/11631795.png" class="img-fluid card-img-left" alt="img1"
-                             style="width: 250px;">
-                        <div class="card-body">
-                            <h5 class="card-title">Control y Gestión</h5>
-                            <p class="card-text">
-                                administra eficiente desde la programación de citas hasta el manejo de historiales
-                                clínicos y la facturación.
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col">
-                    <div class="card custom-card h-75 d-flex flex-row">
-                        <img src="assets/img/images.png" class="img-fluid card-img-left" alt="img1"
-                             style="width: 250px;">
-                        <div class="card-body">
-                            <h5 class="card-title">Soporte Técnico</h5>
-                            <p class="card-text">
-                                incluye un soporte técnico especializado, disponible para resolver
-                                cualquier inconveniente rápidamente.
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="col">
-                    <div class="card custom-card h-75 d-flex flex-row">
-                        <img src="assets/img/10966468.png" class="img-fluid card-img-left" alt="img1"
-                             style="width: 250px;">
-                        <div class="card-body">
-                            <h5 class="card-title">Gestión del Personal</h5>
-                            <p class="card-text">
-                                facilita la organización y gestión del personal del consultorio, permitiendo el
-                                seguimiento de horarios, tareas y desempeño.
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-        <div id="subscription-container" class="subscription-container">
-            <h2>Nuestras Suscripciones</h2>
-
-            <div class="subscription-plan free-plan">
-                <h3>Free Trial</h3>
-                <h3>(Primer Mes)</h3>
-                <p class="price"> S/ 0</p>
-                <ul>
-                    <li>Acceso limitado</li>
-                    <li>Máximo de 250 datos almacenados</li>
-                    <li>Características básicas</li>
-                </ul>
-            </div>
-
-            <div class="subscription-plan premium-plan">
-                <h3>Premium</h3>
-                <p class="price">S/50</p>
-                <ul>
-                    <li>Métricas avanzadas</li>
-                    <li>Base de datos expandida</li>
-                    <li>Caracteristicas avanzadas</li>
-                    <li>Base de datos ilimitada</li>
-                    <li>Backup automático</li>
-                    <li>Soporte prioritario</li>
-                    <li>Todas las caracteristicas</li>
-                </ul>
-            </div>
-
-        </div>
-        <!-- Sección About the Team -->
-        <div id="about-team-container" class="container my-5">
-            <div class="text-center mb-4">
-                <h2 class="fs-1" style="font-family: HospitalBold;">About the Team</h2>
-                <p class="lead">Conoce más acerca de nosotros.</p>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-md-6">
-                    <div class="ratio ratio-16x9">
-                        <iframe src="https://www.youtube.com/embed/PQ1O9xJ1NDA?si=PragXX4jtZMCgKOT" 
-                                title="YouTube video" allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-         <div id="about-team-container" class="container my-5">
-            <div class="text-center mb-4">
-                <h2 class="fs-1" style="font-family: HospitalBold;">About the Product</h2>
-                <p class="lead">Conoce más acerca de Dentify.</p>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-md-6">
-                    <div class="ratio ratio-16x9">
-                        <iframe src="https://www.youtube.com/embed/y0OFtWAXhIQ" 
-                                title="YouTube video" allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <p class="fs-1 text-center">Conoce sobre más beneficios contáctandote con nosotros</p>
-        </div>
-
-    </div>
-
-
-    <div id="contact-us-container" class="container mx-auto mb-5" style="width: 600px">
-
-        <div class="d-flex justify-content-center mt-4 mb-4">
-            <button id="contactButton" class="btn btn-primary align-items-center custom-button"
-                    style="width: 120px; background-color: #2C3E50;"
-                    type="button"
-                    data-bs-toggle="collapse" data-bs-target="#collapseExample"
-                    aria-expanded="false" aria-controls="collapseExample">
-                Contáctanos
-            </button>
-        </div>
-
-        <div class="collapse" id="collapseExample">
-            <div class="card card-body mx-auto" id="form-container">
-                <!-- CONTENIDO -->
-                <div class="mx-auto justify-content-center fw-bold" style="width: 460px">Para más información de los
-                    servicios
-                    que da esta aplicación web rellena este formulario
-                </div>
-                <form class="px-4 py-3 ">
-                    <div class="mb-3">
-                        <label for="DropdownFormFN" class="form-label">Nombres</label>
-                        <input type="text" class="form-control" id="DropdownFormFN" placeholder="Nombres">
-                    </div>
-                    <div class="mb-3">
-                        <label for="DropdownFormLN" class="form-label">Apellidos</label>
-                        <input type="text" class="form-control" id="DropdownFormLN" placeholder="Apellidos">
-                    </div>
-                    <div class="mb-3">
-                        <label for="DropdownFormEmail" class="form-label">Correo Electrónico</label>
-                        <input type="email" class="form-control" id="DropdownFormEmail" placeholder="email@example.com">
-                    </div>
-                    <div class="mb-3">
-                        <label for="DropdownFormPhone" class="form-label">Número Telefónico</label>
-                        <input type="text" class="form-control" id="DropdownFormPhone" placeholder="Número Telefónico">
-                    </div>
-                    <div class="mb-3">
-                        <label for="DropdownFormCompany" class="form-label">Nombre de Clínica</label>
-                        <input type="text" class="form-control" id="DropdownFormCompany"
-                               placeholder="Nombre de Clínica">
-                    </div>
-                    <div class="mb-3">
-                        <label for="DropdownFormMessage" class="form-label">Envianos un mensaje</label>
-                        <textarea type="text" class="form-control" id="DropdownFormMessage"
-                                  placeholder="Envianos un mensaje"></textarea>
-                    </div>
-
-                    <div class="mb-3">
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="dropdownCheck">
-                            <label class="form-check-label" for="dropdownCheck">
-                                Estoy de acuerdo en recibir correos electrónicos promocionales y actualizaciones sobre
-                                productos y servicios de MediTech."
-                            </label>
-                        </div>
-                    </div>
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#finishModal"
-                            style="background-color: #2C3E50;">
-                        Enviar
-                    </button>
-
-
-                    <div class="modal fade" id="finishModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                         aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Formulario enviado</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
+                        <div class="mockup-body">
+                            <div class="row g-2 mb-3">
+                                <div class="col-4">
+                                    <div class="mock-kpi">
+                                        <div class="mock-kpi-label">Citas Hoy</div>
+                                        <div class="mock-kpi-value">8</div>
+                                    </div>
                                 </div>
-                                <div class="modal-body">
-                                    <p>Tu formulario ha sido enviado exitosamente.</p>
+                                <div class="col-4">
+                                    <div class="mock-kpi">
+                                        <div class="mock-kpi-label">Ingresos Hoy</div>
+                                        <div class="mock-kpi-value">S/. 1,240</div>
+                                    </div>
                                 </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close
-                                    </button>
+                                <div class="col-4">
+                                    <div class="mock-kpi" style="border-color: var(--warning-border);">
+                                        <div class="mock-kpi-label">Stock Crítico</div>
+                                        <div class="mock-kpi-value">2 uds</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="small fw-bold text-secondary mb-2">Agenda en curso</div>
+                            <div class="d-flex flex-column gap-2">
+                                <div class="mock-row border-warn">
+                                    <div>
+                                        <div class="fw-bold small">Carmen Delgado · 04:00 PM</div>
+                                        <div class="text-secondary" style="font-size: 0.78rem;">Corona Libre de Metal · 60 min</div>
+                                    </div>
+                                    <span class="status-chip"><span class="status-dot dot-warning"></span>En Atención</span>
+                                </div>
+                                <div class="mock-row border-alert">
+                                    <div>
+                                        <div class="fw-bold small">Lucía Vargas · 05:15 PM</div>
+                                        <div class="text-secondary" style="font-size: 0.78rem;">
+                                            <span class="text-danger fw-semibold">Alerta: Penicilina / AINEs</span> · Profilaxis
+                                        </div>
+                                    </div>
+                                    <span class="status-chip"><span class="status-dot dot-primary"></span>Reservada</span>
+                                </div>
+                                <div class="mock-row">
+                                    <div>
+                                        <div class="fw-bold small">Jorge Castillo · 02:30 PM</div>
+                                        <div class="text-secondary" style="font-size: 0.78rem;">Restauración Resina · S/. 150.00 pagado</div>
+                                    </div>
+                                    <span class="status-chip"><span class="status-dot dot-success"></span>Atendida</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </form>
+                </div>
             </div>
         </div>
+    </section>
 
-    </div>
+    <!-- Impact Metrics -->
+    <section class="metrics-strip">
+        <div class="container">
+            <div class="row g-4 text-center">
+                <div class="col-6 col-md-3" data-aos="fade-up">
+                    <div class="metric-num">0</div>
+                    <div class="metric-label">Citas cruzadas con bloqueo automático</div>
+                </div>
+                <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="50">
+                    <div class="metric-num">100%</div>
+                    <div class="metric-label">Alertas de alergias visibles al instante</div>
+                </div>
+                <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="metric-num">-65%</div>
+                    <div class="metric-label">Tiempo perdido en gestión manual</div>
+                </div>
+                <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="150">
+                    <div class="metric-num">24/7</div>
+                    <div class="metric-label">Acceso desde PC, tablet o celular</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Pain Points Solved -->
+    <section id="problemas" class="section-pad">
+        <div class="container">
+            <div class="text-center mx-auto mb-5" style="max-width: 660px;" data-aos="fade-up">
+                <span class="section-tag">El problema diario en consultorios</span>
+                <h2 class="section-title mb-3">Deja atrás cuadernos, Excel y chats desordenados</h2>
+                <p class="section-sub mx-auto">
+                    Cada minuto que pierdes buscando una historia clínica o corrigiendo citas cruzadas es tiempo que le quitas a tus pacientes.
+                </p>
+            </div>
 
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="pain-card">
+                        <div class="icon-box"><i class="bi bi-calendar-x"></i></div>
+                        <h3 class="h5 fw-bold mb-2">Sin citas duplicadas ni huecos</h3>
+                        <p class="text-secondary mb-0 small">
+                            Dentify valida automáticamente la duración de cada procedimiento e impide agendar dos pacientes en el mismo sillón y horario.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="80">
+                    <div class="pain-card">
+                        <div class="icon-box"><i class="bi bi-shield-exclamation"></i></div>
+                        <h3 class="h5 fw-bold mb-2">Seguridad clínica antes de anestesiar</h3>
+                        <p class="text-secondary mb-0 small">
+                            Identifica en segundos alergias a lidocaína, penicilina, látex o condiciones como hipertensión y anticoagulación antes de iniciar.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="160">
+                    <div class="pain-card">
+                        <div class="icon-box"><i class="bi bi-box-seam"></i></div>
+                        <h3 class="h5 fw-bold mb-2">Nunca te quedes sin insumos clave</h3>
+                        <p class="text-secondary mb-0 small">
+                            Controla tus existencias de resinas, anestesias y guantes con alertas visuales discretas de stock bajo directamente en tu panel.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Platform Modules -->
+    <section id="modulos" class="section-pad pt-0">
+        <div class="container">
+            <div class="row align-items-end mb-5 g-3" data-aos="fade-up">
+                <div class="col-lg-7">
+                    <span class="section-tag">Plataforma Todo-en-Uno</span>
+                    <h2 class="section-title mb-0">Seis módulos diseñados para el ritmo real de una clínica dental</h2>
+                </div>
+                <div class="col-lg-5 text-lg-end">
+                    <p class="text-secondary mb-0">Interfaz minimalista, rápida y pensada para usarse entre paciente y paciente.</p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up">
+                    <div class="feature-card">
+                        <div class="icon-box"><i class="bi bi-calendar3"></i></div>
+                        <h3>Calendario Dinámico Inteligente</h3>
+                        <p>Visualiza tu mes completo con indicadores por estado. Toca cualquier día para gestionar citas, reprogramar o confirmar atención al concluir.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="60">
+                    <div class="feature-card">
+                        <div class="icon-box"><i class="bi bi-person-vcard"></i></div>
+                        <h3>Pacientes e Historia Clínica</h3>
+                        <p>Fichas completas con DNI, contacto de emergencia, filtro de alertas médicas e historial cronológico de diagnósticos y medicación.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="120">
+                    <div class="feature-card">
+                        <div class="icon-box"><i class="bi bi-journal-medical"></i></div>
+                        <h3>Catálogo de Tratamientos</h3>
+                        <p>Estandariza tu tarifario en S/. por especialidad (Prevención, Endodoncia, Ortodoncia, Cirugía, Estética) con duración base integrada a la agenda.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up">
+                    <div class="feature-card">
+                        <div class="icon-box"><i class="bi bi-receipt-cutoff"></i></div>
+                        <h3>Facturación y Medios de Pago</h3>
+                        <p>Registra pagos en Efectivo, Tarjeta, Yape/Plin o Transferencia vinculados a cada cita y cierra automáticamente el estado de atención.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="60">
+                    <div class="feature-card">
+                        <div class="icon-box"><i class="bi bi-boxes"></i></div>
+                        <h3>Control de Inventario Clínico</h3>
+                        <p>Clasifica materiales por categoría odontológica, controla costos unitarios y detecta de inmediato qué insumos requieren reposición.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="120">
+                    <div class="feature-card">
+                        <div class="icon-box"><i class="bi bi-graph-up-arrow"></i></div>
+                        <h3>Dashboard Gerencial en Vivo</h3>
+                        <p>Consulta tus ingresos recientes, agenda del día y alertas de inventario desde el primer segundo que inicias sesión.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clinical Workflow -->
+    <section id="flujo" class="section-pad workflow-section">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-5" data-aos="fade-up">
+                    <img src="assets/img/diseno-clinica-dental-pequena-4.webp"
+                         alt="Consultorio odontológico moderno gestionado con Dentify"
+                         class="clinic-photo">
+                </div>
+                <div class="col-lg-7" data-aos="fade-up" data-aos-delay="80">
+                    <span class="section-tag">Flujo Clínico Sin Fricción</span>
+                    <h2 class="section-title mb-4">De la reserva al cobro en 3 pasos simples</h2>
+
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <div class="step-card">
+                                <span class="step-num">1</span>
+                                <h3 class="h6 fw-bold">Reserva en segundos</h3>
+                                <p class="small text-secondary mb-0">
+                                    Elige paciente y tratamiento del catálogo; Dentify autocompleta duración y verifica que el horario esté libre.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="step-card">
+                                <span class="step-num">2</span>
+                                <h3 class="h6 fw-bold">Atiende con seguridad</h3>
+                                <p class="small text-secondary mb-0">
+                                    Revisa alertas médicas antes de intervenir. La cita pasa a <em>En Atención</em> automáticamente a su hora programada.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="step-card">
+                                <span class="step-num">3</span>
+                                <h3 class="h6 fw-bold">Evoluciona y cobra</h3>
+                                <p class="small text-secondary mb-0">
+                                    Registra notas clínicas, actualiza el historial y emite el comprobante en un clic. Tu dashboard se actualiza al instante.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="planes" class="section-pad">
+        <div class="container">
+            <div class="text-center mx-auto mb-5" style="max-width: 600px;" data-aos="fade-up">
+                <span class="section-tag">Planes Transparentes</span>
+                <h2 class="section-title mb-3">Empieza gratis y escala cuando tu clínica crezca</h2>
+                <p class="section-sub mx-auto">Sin contratos forzosos ni costos ocultos de instalación.</p>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-6 col-lg-5" data-aos="fade-up">
+                    <div class="pricing-card">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h3 class="h5 fw-bold mb-0">Prueba Gratuita</h3>
+                            <span class="pricing-badge">Primer Mes</span>
+                        </div>
+                        <div class="mb-2">
+                            <span class="price-amount">S/ 0</span>
+                            <span class="price-period"> / 30 días</span>
+                        </div>
+                        <p class="small text-secondary mb-0">Ideal para probar Dentify en tu flujo real de pacientes.</p>
+                        <ul class="pricing-list">
+                            <li><i class="bi bi-check2"></i>Agenda inteligente con calendario dinámico</li>
+                            <li><i class="bi bi-check2"></i>Hasta 250 registros clínicos y pacientes</li>
+                            <li><i class="bi bi-check2"></i>Catálogo de tratamientos e historial médico</li>
+                            <li><i class="bi bi-check2"></i>Control de inventario y facturación básica</li>
+                        </ul>
+                        <a href="#contacto" class="btn btn-dentify-outline w-100">Solicitar Prueba Gratis</a>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-5" data-aos="fade-up" data-aos-delay="80">
+                    <div class="pricing-card featured">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h3 class="h5 fw-bold mb-0">Plan Clínica Pro</h3>
+                            <span class="pricing-badge">Más Popular</span>
+                        </div>
+                        <div class="mb-2">
+                            <span class="price-amount">S/ 50</span>
+                            <span class="price-period"> / mes</span>
+                        </div>
+                        <p class="small text-secondary mb-0">Todo lo que necesitas para operar sin límites desde cualquier dispositivo.</p>
+                        <ul class="pricing-list">
+                            <li><i class="bi bi-check2"></i>Pacientes, citas e historiales ilimitados</li>
+                            <li><i class="bi bi-check2"></i>Alertas médicas críticas y control total de insumos</li>
+                            <li><i class="bi bi-check2"></i>Dashboard gerencial y métricas financieras</li>
+                            <li><i class="bi bi-check2"></i>Respaldos automáticos en la nube y soporte prioritario</li>
+                            <li><i class="bi bi-check2"></i>Acceso multiplataforma (Web, Android e iOS)</li>
+                        </ul>
+                        <a href="#contacto" class="btn btn-dentify w-100">Activar Plan Pro</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / Demo CTA -->
+    <section id="contacto" class="section-pad pt-0">
+        <div class="container">
+            <div class="cta-wrapper" data-aos="fade-up">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-5">
+                        <span class="badge rounded-pill mb-3 px-3 py-2" style="background: rgba(20, 184, 166, 0.2); color: #99F6E4;">
+                            Demo Personalizada
+                        </span>
+                        <h2 class="fw-bold mb-3" style="font-size: clamp(1.6rem, 3vw, 2.2rem); letter-spacing: -0.02em;">
+                            Lleva tu consultorio dental al siguiente nivel hoy mismo.
+                        </h2>
+                        <p class="mb-4" style="color: #CBD5E1;">
+                            Déjanos los datos de tu clínica y te activaremos una cuenta de prueba con acompañamiento inicial para importar tus tratamientos.
+                        </p>
+                        <div class="d-flex flex-column gap-2 small" style="color: #CBD5E1;">
+                            <span><i class="bi bi-telephone-fill me-2" style="color: var(--accent);"></i>+51 987 654 321</span>
+                            <span><i class="bi bi-envelope-fill me-2" style="color: var(--accent);"></i>hola@dentify.pe</span>
+                            <span><i class="bi bi-geo-alt-fill me-2" style="color: var(--accent);"></i>Lima, Perú</span>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-7">
+                        <div class="contact-card">
+                            <form id="demoForm" novalidate>
+                                <div class="row g-3">
+                                    <div class="col-sm-6">
+                                        <label for="firstName" class="form-label small fw-semibold">Nombres *</label>
+                                        <input type="text" class="form-control" id="firstName" placeholder="Ej: Dra. Sofía" required>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label for="lastName" class="form-label small fw-semibold">Apellidos *</label>
+                                        <input type="text" class="form-control" id="lastName" placeholder="Ej: Mendoza" required>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label for="email" class="form-label small fw-semibold">Correo electrónico *</label>
+                                        <input type="email" class="form-control" id="email" placeholder="nombre@tuclinica.pe" required>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label for="phone" class="form-label small fw-semibold">WhatsApp / Teléfono *</label>
+                                        <input type="tel" class="form-control" id="phone" placeholder="987 654 321" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="clinic" class="form-label small fw-semibold">Nombre del Consultorio / Clínica</label>
+                                        <input type="text" class="form-control" id="clinic" placeholder="Ej: Clínica Dental Sonrisa Sana">
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="message" class="form-label small fw-semibold">¿Qué te gustaría mejorar primero?</label>
+                                        <textarea class="form-control" id="message" rows="2" placeholder="Ej: Agenda de citas, control de historias o pagos..."></textarea>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="consentCheck" required>
+                                            <label class="form-check-label small text-secondary" for="consentCheck">
+                                                Acepto la <a href="privacy-policy.html" target="_blank" rel="noopener noreferrer" class="text-decoration-underline" style="color: var(--primary);">Política de Privacidad</a> para recibir información sobre Dentify.
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-dentify w-100 py-2">
+                                            Solicitar Acceso Gratuito <i class="bi bi-send ms-1"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
-<footer class="bg-dark text-light py-4">
-    <div class="container" id="extra-info-container">
-        <div class="row text-center">
-            <!-- Enlaces rápidos -->
-            <div class="col-md-4 mb-3">
-                <h5>Enlaces Rápidos</h5>
-                <ul class="list-unstyled">
-                    <li><a href="#home" class="text-light">Inicio</a></li>
-                    <li><a href="#about-us-container" class="text-light">Sobre Nosotros</a></li>
-                    <li><a href="#services-container" class="text-light">Servicios</a></li>
-                    <li><a href="privacy-policy.html" class="text-light" target="_blank" rel="noopener noreferrer">Política de Privacidad</a></li>
-                </ul>
-            </div>
 
-            <div class="col-md-4 mb-3">
-                <h5>Contacto</h5>
-                <ul class="list-unstyled">
-                    <li><i class="bi bi-telephone-fill"></i> +51 123 456 789</li>
-                    <li><i class="bi bi-envelope-fill"></i> info@meditech.com</li>
-                    <li><i class="bi bi-geo-alt-fill"></i> Lima, Perú</li>
-                </ul>
+<!-- Confirmation Modal -->
+<div class="modal fade" id="finishModal" tabindex="-1" aria-labelledby="finishModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 shadow-lg" style="border-radius: 16px;">
+            <div class="modal-header border-0 pb-0">
+                <h5 class="modal-title fw-bold" id="finishModalLabel">
+                    <i class="bi bi-check-circle-fill me-2" style="color: var(--success);"></i>Solicitud recibida
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
             </div>
-
-            <div class="col-md-4 mb-3">
-                <h5>Síguenos</h5>
-                <a href="" class="animation text-light me-2"><i class="bi bi-facebook"></i></a>
-                <a href="" class="animation text-light me-2"><i class="bi bi-twitter"></i></a>
-                <a href="" class="animation text-light me-2"><i class="bi bi-instagram"></i></a>
-                <a href="" class="animation text-light"><i class="bi bi-linkedin"></i></a>
+            <div class="modal-body text-secondary">
+                Gracias por tu interés en <strong>Dentify</strong>. Un especialista se pondrá en contacto contigo en menos de 24 horas para activar tu prueba gratuita.
+            </div>
+            <div class="modal-footer border-0 pt-0">
+                <button type="button" class="btn btn-dentify px-4" data-bs-dismiss="modal">Entendido</button>
             </div>
         </div>
-        <div class="text-center pt-3">
-            <p class="mb-0">&copy; 2026 Meditech. Todos los derechos reservados.</p>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="dentify-footer">
+    <div class="container">
+        <div class="row g-4 pb-4">
+            <div class="col-lg-4">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                    <span class="brand-mark"><i class="bi bi-heart-pulse-fill"></i></span>
+                    <span class="brand-name">Dentify</span>
+                </div>
+                <p class="small mb-3" style="max-width: 300px;">
+                    Plataforma SaaS minimalista para la gestión clínica, operativa y financiera de consultorios odontológicos.
+                </p>
+                <div class="d-flex gap-2">
+                    <a href="#contacto" class="social-link" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="#contacto" class="social-link" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                    <a href="#contacto" class="social-link" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-2 offset-lg-2">
+                <h6>Producto</h6>
+                <ul class="list-unstyled d-flex flex-column gap-2 small">
+                    <li><a href="#problemas">Beneficios</a></li>
+                    <li><a href="#modulos">Módulos</a></li>
+                    <li><a href="#flujo">Cómo Funciona</a></li>
+                    <li><a href="#planes">Planes</a></li>
+                </ul>
+            </div>
+
+            <div class="col-6 col-lg-2">
+                <h6>Legal</h6>
+                <ul class="list-unstyled d-flex flex-column gap-2 small">
+                    <li><a href="privacy-policy.html" target="_blank" rel="noopener noreferrer">Política de Privacidad</a></li>
+                    <li><a href="index_en.html">English Version</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-2">
+                <h6>Contacto</h6>
+                <ul class="list-unstyled d-flex flex-column gap-2 small">
+                    <li>hola@dentify.pe</li>
+                    <li>+51 987 654 321</li>
+                    <li>Lima, Perú</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="border-top pt-3 d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2 small">
+            <span>&copy; 2026 Dentify. Todos los derechos reservados.</span>
+            <span>Hecho para consultorios odontológicos modernos.</span>
         </div>
     </div>
 </footer>
 
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
+    AOS.init({ duration: 600, once: true, offset: 40 });
 
-    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-
-
-    navLinks.forEach(link => {
-        link.addEventListener('click', function () {
-
-            navLinks.forEach(nav => nav.classList.remove('active'));
-
-            this.classList.add('active');
-        });
+    const nav = document.getElementById('topNav');
+    window.addEventListener('scroll', () => {
+        nav.classList.toggle('scrolled', window.scrollY > 12);
     });
 
-
-</script>
-
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-<script>
-    AOS.init();
+    const form = document.getElementById('demoForm');
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (!form.checkValidity()) {
+            form.classList.add('was-validated');
+            return;
+        }
+        const modal = new bootstrap.Modal(document.getElementById('finishModal'));
+        modal.show();
+        form.reset();
+        form.classList.remove('was-validated');
+    });
 </script>
 </body>
 </html>

@@ -3,417 +3,553 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="MediTech - Dental clinic management platform that optimizes daily operations and patient care.">
-    <title>MediTech</title>
+    <meta name="description" content="Dentify: Modern dental clinic management software. Conflict-free scheduling, patient medical alerts, treatment catalog, inventory control, and billing in one place.">
+    <title>Dentify · Smart Dental Practice Management</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/styles/custom-styles.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css"
-          rel="stylesheet">
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="js/bootstrap.bundle.min.js"></script>
+    <link href="assets/styles/custom-styles.css" rel="stylesheet">
 </head>
 <body>
-<nav id="home" class="navbar fixed-top position-fixed navbar-expand-lg custom-navbar">
 
-    <div class="container-fluid">
-
-        <a data-aos="fade-right" class="navbar-brand ms-4 fw-medium fs-3" href="#">
-            MediTech
+<!-- Navbar -->
+<nav id="topNav" class="navbar navbar-expand-lg fixed-top dentify-nav">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2 text-decoration-none" href="#home">
+            <span class="brand-mark"><i class="bi bi-heart-pulse-fill"></i></span>
+            <span class="brand-name">Dentify</span>
         </a>
 
-        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-            <ul class="nav nav-underline navbar-nav">
-                <li class="nav-item mx-5">
-                    <a data-aos="fade-down" class="nav-link active" aria-current="page" href="#about-us-container">About
-                        Us</a>
-                </li>
-                <li class="nav-item mx-5">
-                    <a data-aos="fade-down" class="nav-link" href="#services-container">Services</a>
-                </li>
-                <li class="nav-item mx-5">
-                    <a data-aos="fade-down" class="nav-link" href="#subscription-container">Subscriptions</a>
-                </li>
-                <li class="nav-item mx-5">
-                    <a data-aos="fade-down" class="nav-link" href="#extra-info-container">Info</a>
-                </li>
+        <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav mx-auto gap-lg-1 my-3 my-lg-0">
+                <li class="nav-item"><a class="nav-link" href="#why-dentify">Why Dentify</a></li>
+                <li class="nav-item"><a class="nav-link" href="#modules">Platform</a></li>
+                <li class="nav-item"><a class="nav-link" href="#workflow">How It Works</a></li>
+                <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Request Demo</a></li>
             </ul>
-        </div>
 
-        <div class="dropdown mx-lg-3">
-            <button class="btn btn-secondary dropdown-toggle rounded-pill rounded-2 shadow-lg"
-                    style="background: #1A0E10; color: #FFFFFF;" type="button" id="dropdownMenuButton"
-                    data-bs-toggle="dropdown" aria-expanded="false">
-                <i data-aos="zoom-out" class="bi bi-translate"></i>
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <li><a class="dropdown-item" href="index.html">ES</a></li>
-                <li><a class="dropdown-item" href="index_en.html">EN</a></li>
-
-            </ul>
-        </div>
-
-        <div>
-            <button type="button" class="btn btn-primary btn-lg rounded-pill rounded-2 shadow-lg custom-button"
-                    style="background-color: #2C3E50; color: #FFFFFF;">
-
-                <a data-aos="fade-down" href="#contact-us-container"
-                   class="text-white text-decoration-none">Contact Us</a>
-            </button>
+            <div class="d-flex align-items-center gap-2 pb-2 pb-lg-0">
+                <div class="dropdown">
+                    <button class="lang-pill dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-globe2 me-1"></i>EN
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end shadow-sm border">
+                        <li><a class="dropdown-item" href="index.html">Español (ES)</a></li>
+                        <li><a class="dropdown-item active" href="index_en.html">English (EN)</a></li>
+                    </ul>
+                </div>
+                <a href="#contact" class="btn btn-dentify">Start 30-Day Free Trial</a>
+            </div>
         </div>
     </div>
 </nav>
 
 <main>
-
-    <div id="about-us-container" class="m-lg-5">
-        <div class="row align-items-center">
-            <div class="col-md-6 text-center">
-                <img id="img-about-us" class="rounded-5 " alt="img_title"
-                     src="assets/img/diseno-clinica-dental-pequena-4.webp" style="width: 70%;">
-            </div>
-            <div class="col-md-6 d-flex flex-column justify-content-center align-items-center text-center"
-                 style="width: 40%; font-size: 20px;">
-                <p class="fs-1" style="font-family: HospitalBold;">Who We Are?</p>
-                <p>
-                    At Meditech, we are committed to transforming the way dental professionals manage their clinics by
-                    providing advanced and efficient tools that optimize daily operations and enhance the patient
-                    experience.
-
-
-                </p>
-            </div>
-        </div>
+    <!-- Hero -->
+    <section id="home" class="hero-section">
         <div class="container">
-            <div class="row row-cols-1 row-cols-md-3 g-5 m-lg-4">
-                <div class="col">
-                    <div class="card custom-card h-100">
-                        <img src="assets/img/clinica-dental-equipo.jpg" class="card-img-top img-fluid card-img-custom"
-                             alt="img1">
-                        <div class="card-body">
-                            <h5 class="card-title">Mission</h5>
-                            <p class="card-text"> Simplify and optimize dental clinic management.
-                            </p>
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6" data-aos="fade-up">
+                    <span class="eyebrow-badge mb-3">
+                        <span class="eyebrow-dot"></span>
+                        Built for independent dentists &amp; modern dental clinics
+                    </span>
+                    <h1 class="hero-title mb-3">
+                        Run your dental practice with clarity, <span>without the paperwork.</span>
+                    </h1>
+                    <p class="hero-lead mb-4">
+                        Unify conflict-free scheduling, patient records with critical medical alerts,
+                        standardized treatment catalogs, inventory tracking, and billing in one web &amp; mobile app.
+                    </p>
+
+                    <div class="d-flex flex-wrap gap-3 mb-4">
+                        <a href="#contact" class="btn btn-dentify btn-lg px-4">
+                            Start Free Trial <i class="bi bi-arrow-right ms-1"></i>
+                        </a>
+                        <a href="#modules" class="btn btn-dentify-outline btn-lg px-4">
+                            Explore Modules
+                        </a>
+                    </div>
+
+                    <div class="hero-proof">
+                        <span><i class="bi bi-check-circle-fill me-1"></i>No credit card required</span>
+                        <span><i class="bi bi-check-circle-fill me-1"></i>Web, Android &amp; iPhone</span>
+                        <span><i class="bi bi-check-circle-fill me-1"></i>5-minute setup</span>
+                    </div>
+                </div>
+
+                <!-- Live UI Preview Mockup -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="app-mockup">
+                        <div class="mockup-topbar">
+                            <div class="mockup-dots"><span></span><span></span><span></span></div>
+                            <span class="small fw-semibold text-secondary">Dentify · Daily Clinical Dashboard</span>
+                            <span class="badge rounded-pill text-bg-light border text-dark">Live</span>
                         </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card custom-card h-100">
-                        <img src="assets/img/como-organizar-clinica-dental.webp"
-                             class="card-img-top img-fluid card-img-custom" alt="img2">
-                        <div class="card-body">
-                            <h5 class="card-title">Goal</h5>
-                            <p class="card-text">Become the leading dental clinic management platform in Lima.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card custom-card h-100">
-                        <img src="assets/img/habilidades-de-un-dentista.jpg"
-                             class="card-img-top img-fluid card-img-custom" alt="img3">
-                        <div class="card-body">
-                            <h5 class="card-title">Values</h5>
-                            <p class="card-text">Quality and Excellence, Constant Innovation, and Social Responsibility
-                                to contribute positively.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-
-    <div id="services-container" class="mt-lg-1 mb-lg-1">
-        <div class="row align-items-center" id="description-services">
-            <div class=" d-flex flex-column justify-content-center align-items-center text-center"
-                 style="width: 40%; font-size: 20px;">
-                <p class="fs-1" style="font-family: HospitalBold;">What Do We Offer?</p>
-                <p>
-                    Our software is designed to simplify daily administration, allowing dental professionals to focus on
-                    what matters most: patient care.
-                </p>
-            </div>
-            <div class="col-md-7 text-center">
-                <img id="img-services" class="rounded-5 " alt="img_title"
-                     src="assets/img/personal-de-clinica-hablando-por-telefono-fuente-canva.jpeg" style="width: 70%;">
-            </div>
-        </div>
-        <div class="container my-lg-5">
-            <div class="row row-cols-1 row-cols-md-2 m-5">
-                <div class="col">
-                    <div class="card custom-card h-75 d-flex flex-row">
-                        <img src="assets/img/images%20(1).png" class="img-fluid card-img-left" alt="img1"
-                             style="width: 250px;">
-                        <div class="card-body">
-                            <h5 class="card-title">Productivity</h5>
-                            <p class="card-text">
-                                Optimizes dental clinic productivity by automating routine tasks and streamlining
-                                administrative processes.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card custom-card h-75 d-flex flex-row">
-                        <img src="assets/img/11631795.png" class="img-fluid card-img-left" alt="img1"
-                             style="width: 250px;">
-                        <div class="card-body">
-                            <h5 class="card-title">Control and Management</h5>
-                            <p class="card-text">
-                                Efficiently manages everything from appointment scheduling to clinical record handling
-                                and billing.
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col">
-                    <div class="card custom-card h-75 d-flex flex-row">
-                        <img src="assets/img/images.png" class="img-fluid card-img-left" alt="img1"
-                             style="width: 250px;">
-                        <div class="card-body">
-                            <h5 class="card-title">Technical Support</h5>
-                            <p class="card-text">
-                                Includes specialized technical support, available to resolve any issues quickly.
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="col">
-                    <div class="card custom-card h-75 d-flex flex-row">
-                        <img src="assets/img/10966468.png" class="img-fluid card-img-left" alt="img1"
-                             style="width: 250px;">
-                        <div class="card-body">
-                            <h5 class="card-title">Staff Management</h5>
-                            <p class="card-text">
-                                Facilitates the organization and management of clinic staff, allowing tracking of
-                                schedules, tasks, and performance.
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <div id="subscription-container" class="subscription-container">
-            <h2>Our Subscriptions</h2>
-
-            <div class="subscription-plan free-plan">
-                <h3>Free Trial</h3>
-                <h3>(First Month)</h3>
-                <p class="price"> S/ 0</p>
-                <ul>
-                    <li>Limited access</li>
-                    <li>Maximum of 250 stored data</li>
-                    <li>Basic features</li>
-                </ul>
-            </div>
-
-            <div class="subscription-plan premium-plan">
-                <h3>Premium</h3>
-                <p class="price">S/50</p>
-                <ul>
-                    <li>Advanced metrics</li>
-                    <li>Expanded database</li>
-                    <li>Advanced features</li>
-                    <li>Unlimited database</li>
-                    <li>Automatic backup</li>
-                    <li>Priority support</li>
-                    <li>All features</li>
-                </ul>
-            </div>
-        </div>
-        <!-- Sección About the Team -->
-        <div id="about-team-container" class="container my-5">
-            <div class="text-center mb-4">
-                <h2 class="fs-1" style="font-family: HospitalBold;">About the Team</h2>
-                <p class="lead">Learn more about us.</p>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-md-6">
-                    <div class="ratio ratio-16x9">
-                        <iframe src="https://www.youtube.com/embed/PQ1O9xJ1NDA?si=PragXX4jtZMCgKOT" 
-                                title="YouTube video" allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-         <div id="about-team-container" class="container my-5">
-            <div class="text-center mb-4">
-                <h2 class="fs-1" style="font-family: HospitalBold;">About the Product</h2>
-                <p class="lead">Learn more about the product.</p>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-md-6">
-                    <div class="ratio ratio-16x9">
-                        <iframe src="https://www.youtube.com/embed/y0OFtWAXhIQ" 
-                                title="YouTube video" allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="container">
-            <p class="fs-1 text-center">Learn more about additional benefits by contacting us</p>
-        </div>
-    </div>
-
-
-    <div id="contact-us-container" class="container mx-auto mb-5" style="width: 600px">
-
-        <div class="d-flex justify-content-center mt-4 mb-4">
-            <button id="contactButton" class="btn btn-primary align-items-center custom-button" style="width: 120px"
-                    type="button"
-                    data-bs-toggle="collapse" data-bs-target="#collapseExample"
-                    aria-expanded="false" aria-controls="collapseExample">
-                Contact Us
-            </button>
-        </div>
-
-        <div class="collapse" id="collapseExample">
-            <div class="card card-body mx-auto" id="form-container">
-                <!-- CONTENT -->
-                <div class="mx-auto justify-content-center fw-bold" style="width: 460px">For more information about the
-                    services
-                    provided by this web application, please fill out this form.
-                </div>
-                <form class="px-4 py-3">
-                    <div class="mb-3">
-                        <label for="DropdownFormFN" class="form-label">First Name</label>
-                        <input type="text" class="form-control" id="DropdownFormFN" placeholder="First Name">
-                    </div>
-                    <div class="mb-3">
-                        <label for="DropdownFormLN" class="form-label">Last Name</label>
-                        <input type="text" class="form-control" id="DropdownFormLN" placeholder="Last Name">
-                    </div>
-                    <div class="mb-3">
-                        <label for="DropdownFormEmail" class="form-label">Email Address</label>
-                        <input type="email" class="form-control" id="DropdownFormEmail" placeholder="email@example.com">
-                    </div>
-                    <div class="mb-3">
-                        <label for="DropdownFormPhone" class="form-label">Phone Number</label>
-                        <input type="text" class="form-control" id="DropdownFormPhone" placeholder="Phone Number">
-                    </div>
-                    <div class="mb-3">
-                        <label for="DropdownFormCompany" class="form-label">Clinic Name</label>
-                        <input type="text" class="form-control" id="DropdownFormCompany" placeholder="Clinic Name">
-                    </div>
-                    <div class="mb-3">
-                        <label for="DropdownFormMessage" class="form-label">Send us a message</label>
-                        <textarea class="form-control" id="DropdownFormMessage"
-                                  placeholder="Send us a message"></textarea>
-                    </div>
-
-                    <div class="mb-3">
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="dropdownCheck">
-                            <label class="form-check-label" for="dropdownCheck">
-                                I agree to receive promotional emails and updates about MediTech products and services.
-                            </label>
-                        </div>
-                    </div>
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#finishModal">
-                        Send
-                    </button>
-
-                    <div class="modal fade" id="finishModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                         aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Form Submitted</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
+                        <div class="mockup-body">
+                            <div class="row g-2 mb-3">
+                                <div class="col-4">
+                                    <div class="mock-kpi">
+                                        <div class="mock-kpi-label">Today's Visits</div>
+                                        <div class="mock-kpi-value">8</div>
+                                    </div>
                                 </div>
-                                <div class="modal-body">
-                                    <p>Your form has been successfully submitted.</p>
+                                <div class="col-4">
+                                    <div class="mock-kpi">
+                                        <div class="mock-kpi-label">Today's Revenue</div>
+                                        <div class="mock-kpi-value">S/. 1,240</div>
+                                    </div>
                                 </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close
-                                    </button>
+                                <div class="col-4">
+                                    <div class="mock-kpi" style="border-color: var(--warning-border);">
+                                        <div class="mock-kpi-label">Critical Stock</div>
+                                        <div class="mock-kpi-value">2 units</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="small fw-bold text-secondary mb-2">Active Schedule</div>
+                            <div class="d-flex flex-column gap-2">
+                                <div class="mock-row border-warn">
+                                    <div>
+                                        <div class="fw-bold small">Carmen Delgado · 04:00 PM</div>
+                                        <div class="text-secondary" style="font-size: 0.78rem;">Zirconia Crown Prep · 60 min</div>
+                                    </div>
+                                    <span class="status-chip"><span class="status-dot dot-warning"></span>In Progress</span>
+                                </div>
+                                <div class="mock-row border-alert">
+                                    <div>
+                                        <div class="fw-bold small">Lucia Vargas · 05:15 PM</div>
+                                        <div class="text-secondary" style="font-size: 0.78rem;">
+                                            <span class="text-danger fw-semibold">Alert: Penicillin / NSAIDs</span> · Prophylaxis
+                                        </div>
+                                    </div>
+                                    <span class="status-chip"><span class="status-dot dot-primary"></span>Scheduled</span>
+                                </div>
+                                <div class="mock-row">
+                                    <div>
+                                        <div class="fw-bold small">Jorge Castillo · 02:30 PM</div>
+                                        <div class="text-secondary" style="font-size: 0.78rem;">Composite Restoration · S/. 150.00 paid</div>
+                                    </div>
+                                    <span class="status-chip"><span class="status-dot dot-success"></span>Completed</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </form>
-
+                </div>
             </div>
         </div>
+    </section>
 
+    <!-- Impact Metrics -->
+    <section class="metrics-strip">
+        <div class="container">
+            <div class="row g-4 text-center">
+                <div class="col-6 col-md-3" data-aos="fade-up">
+                    <div class="metric-num">0</div>
+                    <div class="metric-label">Double-booked appointments</div>
+                </div>
+                <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="50">
+                    <div class="metric-num">100%</div>
+                    <div class="metric-label">Instant visibility on allergy alerts</div>
+                </div>
+                <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="metric-num">-65%</div>
+                    <div class="metric-label">Less administrative busywork</div>
+                </div>
+                <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="150">
+                    <div class="metric-num">24/7</div>
+                    <div class="metric-label">Access from desktop, tablet or phone</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    </div>
+    <!-- Pain Points -->
+    <section id="why-dentify" class="section-pad">
+        <div class="container">
+            <div class="text-center mx-auto mb-5" style="max-width: 660px;" data-aos="fade-up">
+                <span class="section-tag">Daily Clinic Challenges</span>
+                <h2 class="section-title mb-3">Move beyond notebooks, spreadsheets, and scattered chats</h2>
+                <p class="section-sub mx-auto">
+                    Every minute spent hunting for patient records or fixing overlapping appointments takes focus away from clinical care.
+                </p>
+            </div>
 
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="pain-card">
+                        <div class="icon-box"><i class="bi bi-calendar-x"></i></div>
+                        <h3 class="h5 fw-bold mb-2">Zero schedule overlaps</h3>
+                        <p class="text-secondary mb-0 small">
+                            Dentify automatically checks procedure durations and prevents double-booking across your daily clinical slots.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="80">
+                    <div class="pain-card">
+                        <div class="icon-box"><i class="bi bi-shield-exclamation"></i></div>
+                        <h3 class="h5 fw-bold mb-2">Clinical safety before anesthesia</h3>
+                        <p class="text-secondary mb-0 small">
+                            Spot lidocaine, penicillin, or latex allergies and systemic conditions like hypertension or anticoagulants at a glance.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="160">
+                    <div class="pain-card">
+                        <div class="icon-box"><i class="bi bi-box-seam"></i></div>
+                        <h3 class="h5 fw-bold mb-2">Never run out of critical supplies</h3>
+                        <p class="text-secondary mb-0 small">
+                            Track composites, anesthetics, and gloves with clean low-stock visual alerts right on your daily dashboard.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Core Modules -->
+    <section id="modules" class="section-pad pt-0">
+        <div class="container">
+            <div class="row align-items-end mb-5 g-3" data-aos="fade-up">
+                <div class="col-lg-7">
+                    <span class="section-tag">All-In-One Platform</span>
+                    <h2 class="section-title mb-0">Six modules built for the real pace of a dental clinic</h2>
+                </div>
+                <div class="col-lg-5 text-lg-end">
+                    <p class="text-secondary mb-0">Clean, minimalist interface engineered to be used effortlessly between patients.</p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up">
+                    <div class="feature-card">
+                        <div class="icon-box"><i class="bi bi-calendar3"></i></div>
+                        <h3>Dynamic Smart Calendar</h3>
+                        <p>Review your full month with status indicators. Tap any day to inspect appointments, reschedule, or confirm visit completion.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="60">
+                    <div class="feature-card">
+                        <div class="icon-box"><i class="bi bi-person-vcard"></i></div>
+                        <h3>Patients &amp; Medical History</h3>
+                        <p>Complete records with ID, emergency contacts, medical alert filtering, and chronological diagnosis and medication logs.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="120">
+                    <div class="feature-card">
+                        <div class="icon-box"><i class="bi bi-journal-medical"></i></div>
+                        <h3>Treatment Catalog</h3>
+                        <p>Standardize pricing and estimated durations across specialties (Prevention, Endodontics, Orthodontics, Surgery, Aesthetics).</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up">
+                    <div class="feature-card">
+                        <div class="icon-box"><i class="bi bi-receipt-cutoff"></i></div>
+                        <h3>Billing &amp; Payment Methods</h3>
+                        <p>Record cash, card, or bank transfer payments linked directly to appointments and close visits automatically.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="60">
+                    <div class="feature-card">
+                        <div class="icon-box"><i class="bi bi-boxes"></i></div>
+                        <h3>Clinical Inventory Control</h3>
+                        <p>Organize dental supplies by category, track unit costs, and spot items needing restock before they disrupt treatments.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="120">
+                    <div class="feature-card">
+                        <div class="icon-box"><i class="bi bi-graph-up-arrow"></i></div>
+                        <h3>Live Practice Dashboard</h3>
+                        <p>Monitor recent revenue, today's schedule, and low-stock alerts the moment you sign in.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workflow -->
+    <section id="workflow" class="section-pad workflow-section">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-5" data-aos="fade-up">
+                    <img src="assets/img/diseno-clinica-dental-pequena-4.webp"
+                         alt="Modern dental clinic powered by Dentify"
+                         class="clinic-photo">
+                </div>
+                <div class="col-lg-7" data-aos="fade-up" data-aos-delay="80">
+                    <span class="section-tag">Frictionless Clinical Workflow</span>
+                    <h2 class="section-title mb-4">From booking to billing in 3 simple steps</h2>
+
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <div class="step-card">
+                                <span class="step-num">1</span>
+                                <h3 class="h6 fw-bold">Book in seconds</h3>
+                                <p class="small text-secondary mb-0">
+                                    Pick a patient and catalog treatment; Dentify auto-fills duration and ensures the time slot is free.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="step-card">
+                                <span class="step-num">2</span>
+                                <h3 class="h6 fw-bold">Treat safely</h3>
+                                <p class="small text-secondary mb-0">
+                                    Review allergy alerts before starting. Visits automatically switch to <em>In Progress</em> at their scheduled time.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="step-card">
+                                <span class="step-num">3</span>
+                                <h3 class="h6 fw-bold">Document &amp; bill</h3>
+                                <p class="small text-secondary mb-0">
+                                    Add clinical notes, update medical history, and issue the invoice in one click while your dashboard updates live.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="section-pad">
+        <div class="container">
+            <div class="text-center mx-auto mb-5" style="max-width: 600px;" data-aos="fade-up">
+                <span class="section-tag">Transparent Pricing</span>
+                <h2 class="section-title mb-3">Start free and scale as your clinic grows</h2>
+                <p class="section-sub mx-auto">No long-term lock-ins or hidden onboarding fees.</p>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-6 col-lg-5" data-aos="fade-up">
+                    <div class="pricing-card">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h3 class="h5 fw-bold mb-0">Free Trial</h3>
+                            <span class="pricing-badge">First Month</span>
+                        </div>
+                        <div class="mb-2">
+                            <span class="price-amount">S/ 0</span>
+                            <span class="price-period"> / 30 days</span>
+                        </div>
+                        <p class="small text-secondary mb-0">Perfect to validate Dentify with your real patient workflow.</p>
+                        <ul class="pricing-list">
+                            <li><i class="bi bi-check2"></i>Smart scheduling with dynamic calendar</li>
+                            <li><i class="bi bi-check2"></i>Up to 250 clinical records &amp; patients</li>
+                            <li><i class="bi bi-check2"></i>Treatment catalog &amp; medical histories</li>
+                            <li><i class="bi bi-check2"></i>Inventory tracking &amp; core billing</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-dentify-outline w-100">Request Free Trial</a>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-5" data-aos="fade-up" data-aos-delay="80">
+                    <div class="pricing-card featured">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h3 class="h5 fw-bold mb-0">Clinic Pro Plan</h3>
+                            <span class="pricing-badge">Most Popular</span>
+                        </div>
+                        <div class="mb-2">
+                            <span class="price-amount">S/ 50</span>
+                            <span class="price-period"> / month</span>
+                        </div>
+                        <p class="small text-secondary mb-0">Everything you need to run your practice without limits.</p>
+                        <ul class="pricing-list">
+                            <li><i class="bi bi-check2"></i>Unlimited patients, visits &amp; medical histories</li>
+                            <li><i class="bi bi-check2"></i>Critical medical alerts &amp; full inventory control</li>
+                            <li><i class="bi bi-check2"></i>Executive dashboard &amp; financial metrics</li>
+                            <li><i class="bi bi-check2"></i>Automatic cloud backups &amp; priority support</li>
+                            <li><i class="bi bi-check2"></i>Cross-platform access (Web, Android &amp; iOS)</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-dentify w-100">Activate Pro Plan</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / Demo CTA -->
+    <section id="contact" class="section-pad pt-0">
+        <div class="container">
+            <div class="cta-wrapper" data-aos="fade-up">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-5">
+                        <span class="badge rounded-pill mb-3 px-3 py-2" style="background: rgba(20, 184, 166, 0.2); color: #99F6E4;">
+                            Personalized Demo
+                        </span>
+                        <h2 class="fw-bold mb-3" style="font-size: clamp(1.6rem, 3vw, 2.2rem); letter-spacing: -0.02em;">
+                            Take your dental clinic to the next level today.
+                        </h2>
+                        <p class="mb-4" style="color: #CBD5E1;">
+                            Share your clinic details and we will activate your free trial account with guided onboarding for your treatment catalog.
+                        </p>
+                        <div class="d-flex flex-column gap-2 small" style="color: #CBD5E1;">
+                            <span><i class="bi bi-telephone-fill me-2" style="color: var(--accent);"></i>+51 987 654 321</span>
+                            <span><i class="bi bi-envelope-fill me-2" style="color: var(--accent);"></i>hola@dentify.pe</span>
+                            <span><i class="bi bi-geo-alt-fill me-2" style="color: var(--accent);"></i>Lima, Peru</span>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-7">
+                        <div class="contact-card">
+                            <form id="demoForm" novalidate>
+                                <div class="row g-3">
+                                    <div class="col-sm-6">
+                                        <label for="firstName" class="form-label small fw-semibold">First Name *</label>
+                                        <input type="text" class="form-control" id="firstName" placeholder="e.g. Dr. Sofia" required>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label for="lastName" class="form-label small fw-semibold">Last Name *</label>
+                                        <input type="text" class="form-control" id="lastName" placeholder="e.g. Mendoza" required>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label for="email" class="form-label small fw-semibold">Email Address *</label>
+                                        <input type="email" class="form-control" id="email" placeholder="name@yourclinic.com" required>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label for="phone" class="form-label small fw-semibold">WhatsApp / Phone *</label>
+                                        <input type="tel" class="form-control" id="phone" placeholder="+51 987 654 321" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="clinic" class="form-label small fw-semibold">Clinic Name</label>
+                                        <input type="text" class="form-control" id="clinic" placeholder="e.g. Bright Smile Dental Clinic">
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="message" class="form-label small fw-semibold">What would you like to improve first?</label>
+                                        <textarea class="form-control" id="message" rows="2" placeholder="e.g. Appointment scheduling, patient records, billing..."></textarea>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="consentCheck" required>
+                                            <label class="form-check-label small text-secondary" for="consentCheck">
+                                                I accept the <a href="privacy-policy.html" target="_blank" rel="noopener noreferrer" class="text-decoration-underline" style="color: var(--primary);">Privacy Policy</a> to receive information about Dentify.
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-dentify w-100 py-2">
+                                            Request Free Access <i class="bi bi-send ms-1"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
 
-<footer class="bg-dark text-light py-4">
-    <div class="container" id="extra-info-container">
-        <div class="row text-center">
-            <!-- Quick Links -->
-            <div class="col-md-4 mb-3">
-                <h5>Quick Links</h5>
-                <ul class="list-unstyled">
-                    <li><a href="#home" class="text-light">Home</a></li>
-                    <li><a href="#about-us-container" class="text-light">About Us</a></li>
-                    <li><a href="#services-container" class="text-light">Services</a></li>
-                    <li><a href="privacy-policy.html" class="text-light" target="_blank" rel="noopener noreferrer">Privacy Policy</a></li>
+<!-- Confirmation Modal -->
+<div class="modal fade" id="finishModal" tabindex="-1" aria-labelledby="finishModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 shadow-lg" style="border-radius: 16px;">
+            <div class="modal-header border-0 pb-0">
+                <h5 class="modal-title fw-bold" id="finishModalLabel">
+                    <i class="bi bi-check-circle-fill me-2" style="color: var(--success);"></i>Request Received
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-secondary">
+                Thank you for your interest in <strong>Dentify</strong>. A specialist will contact you within 24 hours to activate your free trial account.
+            </div>
+            <div class="modal-footer border-0 pt-0">
+                <button type="button" class="btn btn-dentify px-4" data-bs-dismiss="modal">Got it</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="dentify-footer">
+    <div class="container">
+        <div class="row g-4 pb-4">
+            <div class="col-lg-4">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                    <span class="brand-mark"><i class="bi bi-heart-pulse-fill"></i></span>
+                    <span class="brand-name">Dentify</span>
+                </div>
+                <p class="small mb-3" style="max-width: 300px;">
+                    Minimalist SaaS platform for clinical, operational, and financial dental clinic management.
+                </p>
+                <div class="d-flex gap-2">
+                    <a href="#contact" class="social-link" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="#contact" class="social-link" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                    <a href="#contact" class="social-link" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-2 offset-lg-2">
+                <h6>Product</h6>
+                <ul class="list-unstyled d-flex flex-column gap-2 small">
+                    <li><a href="#why-dentify">Benefits</a></li>
+                    <li><a href="#modules">Modules</a></li>
+                    <li><a href="#workflow">How It Works</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
                 </ul>
             </div>
 
-            <div class="col-md-4 mb-3">
-                <h5>Contact</h5>
-                <ul class="list-unstyled">
-                    <li><i class="bi bi-telephone-fill"></i> +51 123 456 789</li>
-                    <li><i class="bi bi-envelope-fill"></i> info@meditech.com</li>
-                    <li><i class="bi bi-geo-alt-fill"></i> Lima, Peru</li>
+            <div class="col-6 col-lg-2">
+                <h6>Legal</h6>
+                <ul class="list-unstyled d-flex flex-column gap-2 small">
+                    <li><a href="privacy-policy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a></li>
+                    <li><a href="index.html">Versión en Español</a></li>
                 </ul>
             </div>
 
-            <div class="col-md-4 mb-3">
-                <h5>Follow Us</h5>
-                <a href="" class="animation text-light me-2"><i class="bi bi-facebook"></i></a>
-                <a href="" class="animation text-light me-2"><i class="bi bi-twitter"></i></a>
-                <a href="" class="animation text-light me-2"><i class="bi bi-instagram"></i></a>
-                <a href="" class="animation text-light"><i class="bi bi-linkedin"></i></a>
+            <div class="col-lg-2">
+                <h6>Contact</h6>
+                <ul class="list-unstyled d-flex flex-column gap-2 small">
+                    <li>hola@dentify.pe</li>
+                    <li>+51 987 654 321</li>
+                    <li>Lima, Peru</li>
+                </ul>
             </div>
         </div>
-        <div class="text-center pt-3">
-            <p class="mb-0">&copy; 2026 Meditech. All rights reserved.</p>
+
+        <div class="border-top pt-3 d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2 small">
+            <span>&copy; 2026 Dentify. All rights reserved.</span>
+            <span>Built for modern dental practices.</span>
         </div>
-
-
     </div>
 </footer>
 
-
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
+    AOS.init({ duration: 600, once: true, offset: 40 });
 
-    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-
-
-    navLinks.forEach(link => {
-        link.addEventListener('click', function () {
-
-            navLinks.forEach(nav => nav.classList.remove('active'));
-
-            this.classList.add('active');
-        });
+    const nav = document.getElementById('topNav');
+    window.addEventListener('scroll', () => {
+        nav.classList.toggle('scrolled', window.scrollY > 12);
     });
 
-
+    const form = document.getElementById('demoForm');
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (!form.checkValidity()) {
+            form.classList.add('was-validated');
+            return;
+        }
+        const modal = new bootstrap.Modal(document.getElementById('finishModal'));
+        modal.show();
+        form.reset();
+        form.classList.remove('was-validated');
+    });
 </script>
-
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-<script>
-    AOS.init();
-</script>
-
 </body>
 </html>
