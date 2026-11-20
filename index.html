@@ -48,6 +48,10 @@
                         <li><a class="dropdown-item" href="index_en.html">English (EN)</a></li>
                     </ul>
                 </div>
+                <!-- TODO(Release): reemplazar data-bs-toggle/data-bs-target por href="https://<URL_PWA_DESPLEGADA>" al publicar -->
+                <a href="#" role="button" class="btn btn-dentify-outline" data-bs-toggle="modal" data-bs-target="#appAccessModal">
+                    <i class="bi bi-box-arrow-up-right me-1"></i>Acceder a la App
+                </a>
                 <a href="#contacto" class="btn btn-dentify">Prueba Gratis 30 Días</a>
             </div>
         </div>
@@ -235,8 +239,8 @@
                 <div class="col-md-6 col-lg-4" data-aos="fade-up">
                     <div class="feature-card">
                         <div class="icon-box"><i class="bi bi-calendar3"></i></div>
-                        <h3>Calendario Dinámico Inteligente</h3>
-                        <p>Visualiza tu mes completo con indicadores por estado. Toca cualquier día para gestionar citas, reprogramar o confirmar atención al concluir.</p>
+                        <h3>Calendario Dinámico y WhatsApp</h3>
+                        <p>Visualiza tu mes completo por estado, gestiona citas en un toque y envía recordatorios por WhatsApp al paciente en 1 clic.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="60">
@@ -263,15 +267,15 @@
                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="60">
                     <div class="feature-card">
                         <div class="icon-box"><i class="bi bi-boxes"></i></div>
-                        <h3>Control de Inventario Clínico</h3>
-                        <p>Clasifica materiales por categoría odontológica, controla costos unitarios y detecta de inmediato qué insumos requieren reposición.</p>
+                        <h3>Control y Bitácora de Inventario</h3>
+                        <p>Clasifica materiales por categoría, detecta stock crítico al instante y audita automáticamente cada ingreso o salida en el historial.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="120">
                     <div class="feature-card">
                         <div class="icon-box"><i class="bi bi-graph-up-arrow"></i></div>
-                        <h3>Dashboard Gerencial en Vivo</h3>
-                        <p>Consulta tus ingresos recientes, agenda del día y alertas de inventario desde el primer segundo que inicias sesión.</p>
+                        <h3>Dashboard Analítico en Vivo</h3>
+                        <p>Consulta ingresos por especialidad odontológica, tasa de asistencia, balance recaudado vs por cobrar y alertas de inventario.</p>
                     </div>
                 </div>
             </div>
@@ -369,10 +373,10 @@
                         <p class="small text-secondary mb-0">Todo lo que necesitas para operar sin límites desde cualquier dispositivo.</p>
                         <ul class="pricing-list">
                             <li><i class="bi bi-check2"></i>Pacientes, citas e historiales ilimitados</li>
-                            <li><i class="bi bi-check2"></i>Alertas médicas críticas y control total de insumos</li>
-                            <li><i class="bi bi-check2"></i>Dashboard gerencial y métricas financieras</li>
-                            <li><i class="bi bi-check2"></i>Respaldos automáticos en la nube y soporte prioritario</li>
-                            <li><i class="bi bi-check2"></i>Acceso multiplataforma (Web, Android e iOS)</li>
+                            <li><i class="bi bi-check2"></i>Recordatorios de citas por WhatsApp en 1 clic</li>
+                            <li><i class="bi bi-check2"></i>Alertas médicas críticas y bitácora de insumos</li>
+                            <li><i class="bi bi-check2"></i>Dashboard gerencial por especialidad y tasa de asistencia</li>
+                            <li><i class="bi bi-check2"></i>Acceso multiplataforma (Web PWA, Android e iOS)</li>
                         </ul>
                         <a href="#contacto" class="btn btn-dentify w-100">Activar Plan Pro</a>
                     </div>
@@ -453,6 +457,27 @@
         </div>
     </section>
 </main>
+
+<!-- Web App Access Modal (Placeholder prior to final deployment) -->
+<div class="modal fade" id="appAccessModal" tabindex="-1" aria-labelledby="appAccessModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 shadow-lg" style="border-radius: 16px;">
+            <div class="modal-header border-0 pb-0">
+                <h5 class="modal-title fw-bold" id="appAccessModalLabel">
+                    <i class="bi bi-laptop me-2" style="color: var(--primary);"></i>Acceso a Plataforma Dentify
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body text-secondary">
+                El acceso directo a la plataforma Web / PWA (y al instalador móvil) se habilitará en este enlace tras el despliegue final de la versión de producción.
+            </div>
+            <div class="modal-footer border-0 pt-0">
+                <button type="button" class="btn btn-dentify-outline" data-bs-dismiss="modal">Cerrar</button>
+                <a href="#contacto" class="btn btn-dentify" data-bs-dismiss="modal">Solicitar Demo</a>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- Confirmation Modal -->
 <div class="modal fade" id="finishModal" tabindex="-1" aria-labelledby="finishModalLabel" aria-hidden="true">
