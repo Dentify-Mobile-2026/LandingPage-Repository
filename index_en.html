@@ -48,6 +48,10 @@
                         <li><a class="dropdown-item active" href="index_en.html">English (EN)</a></li>
                     </ul>
                 </div>
+                <!-- TODO(Release): replace modal trigger with href="https://<DEPLOYED_PWA_URL>" upon final release -->
+                <a href="#" role="button" class="btn btn-dentify-outline" data-bs-toggle="modal" data-bs-target="#appAccessModal">
+                    <i class="bi bi-box-arrow-up-right me-1"></i>Open Web App
+                </a>
                 <a href="#contact" class="btn btn-dentify">Start 30-Day Free Trial</a>
             </div>
         </div>
@@ -235,8 +239,8 @@
                 <div class="col-md-6 col-lg-4" data-aos="fade-up">
                     <div class="feature-card">
                         <div class="icon-box"><i class="bi bi-calendar3"></i></div>
-                        <h3>Dynamic Smart Calendar</h3>
-                        <p>Review your full month with status indicators. Tap any day to inspect appointments, reschedule, or confirm visit completion.</p>
+                        <h3>Smart Calendar &amp; WhatsApp</h3>
+                        <p>Track your full month by status, manage visits in one tap, and send prefilled WhatsApp reminders to patients in 1 click.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="60">
@@ -263,15 +267,15 @@
                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="60">
                     <div class="feature-card">
                         <div class="icon-box"><i class="bi bi-boxes"></i></div>
-                        <h3>Clinical Inventory Control</h3>
-                        <p>Organize dental supplies by category, track unit costs, and spot items needing restock before they disrupt treatments.</p>
+                        <h3>Inventory Control &amp; Audit Log</h3>
+                        <p>Categorize dental supplies, spot low-stock items immediately, and audit every stock adjustment in a chronological movement log.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="120">
                     <div class="feature-card">
                         <div class="icon-box"><i class="bi bi-graph-up-arrow"></i></div>
-                        <h3>Live Practice Dashboard</h3>
-                        <p>Monitor recent revenue, today's schedule, and low-stock alerts the moment you sign in.</p>
+                        <h3>Executive Analytics Dashboard</h3>
+                        <p>Monitor revenue by dental specialty, monthly attendance rates, collected vs pending balances, and critical stock alerts live.</p>
                     </div>
                 </div>
             </div>
@@ -369,10 +373,10 @@
                         <p class="small text-secondary mb-0">Everything you need to run your practice without limits.</p>
                         <ul class="pricing-list">
                             <li><i class="bi bi-check2"></i>Unlimited patients, visits &amp; medical histories</li>
-                            <li><i class="bi bi-check2"></i>Critical medical alerts &amp; full inventory control</li>
-                            <li><i class="bi bi-check2"></i>Executive dashboard &amp; financial metrics</li>
-                            <li><i class="bi bi-check2"></i>Automatic cloud backups &amp; priority support</li>
-                            <li><i class="bi bi-check2"></i>Cross-platform access (Web, Android &amp; iOS)</li>
+                            <li><i class="bi bi-check2"></i>1-click WhatsApp appointment reminders</li>
+                            <li><i class="bi bi-check2"></i>Critical medical alerts &amp; inventory movement audit log</li>
+                            <li><i class="bi bi-check2"></i>Specialty revenue &amp; attendance rate analytics</li>
+                            <li><i class="bi bi-check2"></i>Cross-platform access (Web PWA, Android &amp; iOS)</li>
                         </ul>
                         <a href="#contact" class="btn btn-dentify w-100">Activate Pro Plan</a>
                     </div>
@@ -453,6 +457,27 @@
         </div>
     </section>
 </main>
+
+<!-- Web App Access Modal (Placeholder prior to final deployment) -->
+<div class="modal fade" id="appAccessModal" tabindex="-1" aria-labelledby="appAccessModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 shadow-lg" style="border-radius: 16px;">
+            <div class="modal-header border-0 pb-0">
+                <h5 class="modal-title fw-bold" id="appAccessModalLabel">
+                    <i class="bi bi-laptop me-2" style="color: var(--primary);"></i>Dentify Platform Access
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-secondary">
+                Direct access to the Dentify Web / PWA platform (and mobile installer) will be enabled here right after the final production deployment.
+            </div>
+            <div class="modal-footer border-0 pt-0">
+                <button type="button" class="btn btn-dentify-outline" data-bs-dismiss="modal">Close</button>
+                <a href="#contact" class="btn btn-dentify" data-bs-dismiss="modal">Request Demo</a>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- Confirmation Modal -->
 <div class="modal fade" id="finishModal" tabindex="-1" aria-labelledby="finishModalLabel" aria-hidden="true">
